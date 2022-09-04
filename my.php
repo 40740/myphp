@@ -4,6 +4,8 @@
         if (function_exists('file_get_contents')) { 
         
         $result = @file_get_contents("daily_multi.m3u8"); 
+         
+        $txt = "我是文本写入";
         
         }
         if ($file_contents == '') { 
@@ -14,6 +16,7 @@
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $result = curl_exec($ch);
         curl_close($ch);  
+         $txt = "我是访问写";
          
         }
 
@@ -66,6 +69,6 @@
         }
          
 
-        file_put_contents("README.md", $result."<<<      >>>>".json_encode($data)."time ：".date("Y/m/d"));  
+        file_put_contents("README.md", $result."<<<  ".$txt ."    >>>>".json_encode($data)."time ：".date('Y-m-d H:i:s'));  
         
      
