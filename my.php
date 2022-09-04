@@ -1,5 +1,6 @@
 <?Php 
- 
+        date_default_timezone_set('PRC');  
+
         $result =file_get_contents("./daily_multi.m3u8"); 
    
         $txt = "读取方式：file_get_contents </br> 更新时间 ：" .date('Y-m-d h:i:s');
