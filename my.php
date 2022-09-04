@@ -11,19 +11,15 @@
         if ($file_contents == '') { 
         $ch = curl_init();
         $timeout = 30;
-        curl_setopt($ch, CURLOPT_URL, "daily_multi.m3u8");
+        curl_setopt($ch, CURLOPT_URL, "https://9.wx1688.top/daily_multi.m3u8");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $result = curl_exec($ch);
         curl_close($ch);  
-         $txt = "我是访问写";
+        $txt = "我是访问写";
          
         }
-
-//         $result =file_get_contents("daily_multi.m3u8"); 
-
-        
-        
+      
         $v = explode('#EXTINF',$result); //拆 $ 符号为数组   
         
         unset($v[0]); //删掉第一项
@@ -69,6 +65,6 @@
         }
          
 
-        file_put_contents("README.md", $result."<<<  ".$txt ."    >>>>".json_encode($data)."time ：".date('Y-m-d H:i:s'));  
+        file_put_contents("README.md", $result."<<<  ".$txt ."    >>>>".json_encode($data)."<<<<  >>>>> time ：".date('Y-m-d H:i:s'));  
         
      
