@@ -56,7 +56,6 @@
         date_default_timezone_set(PRC);     //将date函数默认时间设置中国区时间
         $currenttime=date("Y-m-d H:i:s");   //给变量赋值，调用date函数，格式为 年-月-日 时:分:秒
 
-        file_put_contents("README.md", $data."创建时间 ：" + $currenttime); 
-        file_put_contents("json.json", $v."创建时间 ：" + $currenttime);  
+        file_put_contents("README.md", $data."创建时间 ：" + $currenttime);  
         
      
