@@ -24,7 +24,7 @@ jobs:
 
       - name: commit
         run: |
-          git config --global user.email teg1c@foxmail.com
+          git config --global user 40740
           git config --global user.name github-actions
           git pull
           git add .
