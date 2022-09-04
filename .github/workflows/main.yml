@@ -18,7 +18,7 @@ jobs:
 
       - name: Update
         run: |
-          php ./myphp.php
+          php ./my.php
         shell: bash
 
       - name: commit
