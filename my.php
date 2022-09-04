@@ -54,6 +54,8 @@
         
         
         
-        file_put_contents("README.MD", $data); 
+        file_put_contents("README.md", $data); 
+        file_put_contents("json.json", $v); 
+        file_put_contents("txt.json", "有吗"); 
         
      
