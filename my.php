@@ -8,7 +8,7 @@
 //         $result=curl_exec($ch);
 //         curl_close($ch); //关闭访问,释放资源 
 
-        $result = fopen("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8","r");
+        $result =file_get_contents("https://hub.nuaa.cf/cxfksword/iptv/raw/master/daily_multi.m3u8"); 
         
         $v = explode('#EXTINF',$result); //拆 $ 符号为数组   
         
