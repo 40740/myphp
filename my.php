@@ -1,6 +1,7 @@
 <?Php 
         date_default_timezone_set('PRC');  
 
+        $md =file_get_contents("./README.md"); 
         $result =file_get_contents("./daily_multi.m3u8"); 
    
         $txt = "读取方式：file_get_contents </br> 更新时间 ：" .date('Y-m-d H:i:s');
@@ -61,6 +62,6 @@
          
 
         file_put_contents("my.json",json_encode($data,JSON_UNESCAPED_UNICODE));  
-        file_put_contents("README.md",$txt);
+        file_put_contents("README.md",$txt."</br> ".$md);
         
      
