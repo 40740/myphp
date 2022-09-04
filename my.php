@@ -1,24 +1,25 @@
 <?Php 
  
+        $result =file_get_contents("./daily_multi.m3u8"); 
 
-        if (function_exists('file_get_contents')) { 
+//         if (function_exists('file_get_contents')) { 
         
-        $result = @file_get_contents("./daily_multi.m3u8"); 
+//         $result = @file_get_contents("./daily_multi.m3u8"); 
          
-        $txt = "我是文本写入";
+//         $txt = "我是文本写入";
         
-        }
-        if ($file_contents == '') { 
-        $ch = curl_init();
-        $timeout = 30;
-        curl_setopt($ch, CURLOPT_URL, "https://raw.iqiq.io/cxfksword/iptv/master/daily_multi.m3u8");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-        $result = curl_exec($ch);
-        curl_close($ch);  
-        $txt = "我是访问写";
+//         }
+//         if ($file_contents == '') { 
+//         $ch = curl_init();
+//         $timeout = 30;
+//         curl_setopt($ch, CURLOPT_URL, "https://raw.iqiq.io/cxfksword/iptv/master/daily_multi.m3u8");
+//         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+//         $result = curl_exec($ch);
+//         curl_close($ch);  
+//         $txt = "我是访问写";
          
-        }
+//         }
       
         $v = explode('#EXTINF',$result); //拆 $ 符号为数组   
         
