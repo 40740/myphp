@@ -10,23 +10,20 @@
 
 
 
-        if (function_exists('file_get_contents')) {//判断是否支持file_get_contents
+        if (function_exists('file_get_contents')) { 
         
-        $result = @file_get_contents("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8");
-        
-        file_put_contents("momo.json", $result." //判断是否支持file_get_contents time  ：".date("Y/m/d"));  
+        $result = @file_get_contents("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8"); 
         
         }
-        if ($file_contents == '') {//判断$file_contents是否为空
+        if ($file_contents == '') { 
         $ch = curl_init();
         $timeout = 30;
         curl_setopt($ch, CURLOPT_URL, "https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $result = curl_exec($ch);
-        curl_close($ch);
-                
-        file_put_contents("momo.json", $result." /判断$file_contents是否为空  time ：".date("Y/m/d"));          
+        curl_close($ch);  
+         
         }
 
 //         $result =file_get_contents("daily_multi.m3u8"); 
@@ -78,6 +75,6 @@
         }
          
 
-        file_put_contents("README.md", json_encode($data)."time ：".date("Y/m/d"));  
+        file_put_contents("README.md", $result."<<<      >>>>".json_encode($data)."time ：".date("Y/m/d"));  
         
      
