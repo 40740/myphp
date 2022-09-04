@@ -15,11 +15,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          extensions: swoole
 
       - name: Update
         run: |
-          php ./run.php
+          php ./myphp.php
         shell: bash
 
       - name: commit
