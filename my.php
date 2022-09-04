@@ -14,7 +14,7 @@
         
         $result = @file_get_contents("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8");
         
-        file_put_contents("momo.json", $result." 支持吗function_exists('file_get_contents') 创建时间 ：" + date("Y/m/d"));  
+        file_put_contents("momo.json", $result." ok  ??? function_exists('file_get_contents') time  ：" + date("Y/m/d"));  
         
         }
         if ($file_contents == '') {//判断$file_contents是否为空
@@ -26,7 +26,7 @@
         $result = curl_exec($ch);
         curl_close($ch);
                 
-        file_put_contents("momo.json", $result." 支持吗 灌灌灌灌 $file_contents == '' 创建时间 ：" + date("Y/m/d"));          
+        file_put_contents("momo.json", $result." ok  ??? $file_contents == '' time ：" + date("Y/m/d"));          
         }
 
 //         $result =file_get_contents("daily_multi.m3u8"); 
@@ -78,6 +78,6 @@
         }
          
 
-        file_put_contents("README.md", $data."创建时间 ：" + date("Y/m/d"));  
+        file_put_contents("README.md", $data."time ：" + date("Y/m/d"));  
         
      
