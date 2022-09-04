@@ -59,6 +59,7 @@
         }
          
 
-        file_put_contents("README.md",);  
+        file_put_contents("my.json",json_encode($data,JSON_UNESCAPED_UNICODE);  
+        file_put_contents("README.md",$txt);
         
      
