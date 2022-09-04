@@ -3,7 +3,7 @@
 
         $result =file_get_contents("./daily_multi.m3u8"); 
    
-        $txt = "读取方式：file_get_contents </br> 更新时间 ：" .date('Y-m-d h:i:s');
+        $txt = "读取方式：file_get_contents </br> 更新时间 ：" .date('Y-m-d H:i:s');
         
   //         $ch = curl_init();
   //         $timeout = 30;
