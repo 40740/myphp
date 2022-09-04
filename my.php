@@ -3,7 +3,7 @@
 
         if (function_exists('file_get_contents')) { 
         
-        $result = @file_get_contents("daily_multi.m3u8"); 
+        $result = @file_get_contents("./daily_multi.m3u8"); 
          
         $txt = "我是文本写入";
         
@@ -65,6 +65,6 @@
         }
          
 
-        file_put_contents("README.md", $result."<<<  ".$txt ."    >>>>".json_encode($data)."<<<<  >>>>> time ：".date('Y-m-d H:i:s'));  
+        file_put_contents("README.md", $txt.json_encode($data));  
         
      
