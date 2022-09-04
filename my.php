@@ -11,7 +11,7 @@
         if ($file_contents == '') { 
         $ch = curl_init();
         $timeout = 30;
-        curl_setopt($ch, CURLOPT_URL, "https://9.wx1688.top/daily_multi.m3u8");
+        curl_setopt($ch, CURLOPT_URL, "https://raw.iqiq.io/cxfksword/iptv/master/daily_multi.m3u8");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $result = curl_exec($ch);
