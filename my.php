@@ -1,24 +1,15 @@
 <?Php 
-//         $loginUrl ="https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8";
-
-//         $ch = curl_init();
-//         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-//         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//         curl_setopt($ch, CURLOPT_URL,$loginUrl);
-//         $result=curl_exec($ch);
-//         curl_close($ch); //关闭访问,释放资源 
-
-
+ 
 
         if (function_exists('file_get_contents')) { 
         
-        $result = @file_get_contents("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8"); 
+        $result = @file_get_contents("daily_multi.m3u8"); 
         
         }
         if ($file_contents == '') { 
         $ch = curl_init();
         $timeout = 30;
-        curl_setopt($ch, CURLOPT_URL, "https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8");
+        curl_setopt($ch, CURLOPT_URL, "daily_multi.m3u8");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
         $result = curl_exec($ch);
