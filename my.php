@@ -6,7 +6,7 @@
         
 //         $result = @file_get_contents("./daily_multi.m3u8"); 
          
-//         $txt = "我是文本写入";
+        $txt = "我是文本写入";
         
 //         }
 //         if ($file_contents == '') { 
