@@ -8,9 +8,30 @@
 //         $result=curl_exec($ch);
 //         curl_close($ch); //关闭访问,释放资源 
 
-        $result =file_get_contents("daily_multi.m3u8"); 
 
-        file_put_contents("momo.json", $result."创建时间 ：" + $currenttime);  
+
+        if (function_exists('file_get_contents')) {//判断是否支持file_get_contents
+        
+        $result = @file_get_contents("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8");
+        
+        file_put_contents("momo.json", $result." 支持吗function_exists('file_get_contents') 创建时间 ：" + date("Y/m/d"));  
+        
+        }
+        if ($file_contents == '') {//判断$file_contents是否为空
+        $ch = curl_init();
+        $timeout = 30;
+        curl_setopt($ch, CURLOPT_URL, "https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+        $result = curl_exec($ch);
+        curl_close($ch);
+                
+        file_put_contents("momo.json", $result." 支持吗 灌灌灌灌 $file_contents == '' 创建时间 ：" + date("Y/m/d"));          
+        }
+
+//         $result =file_get_contents("daily_multi.m3u8"); 
+
+        
         
         $v = explode('#EXTINF',$result); //拆 $ 符号为数组   
         
@@ -55,11 +76,8 @@
              array_push($data,$json);
           
         }
-        
-        
-        date_default_timezone_set(PRC);     //将date函数默认时间设置中国区时间
-        $currenttime=date("Y-m-d H:i:s");   //给变量赋值，调用date函数，格式为 年-月-日 时:分:秒
+         
 
-        file_put_contents("README.md", $data."创建时间 ：" + $currenttime);  
+        file_put_contents("README.md", $data."创建时间 ：" + date("Y/m/d"));  
         
      
