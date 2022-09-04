@@ -9,6 +9,8 @@
 //         curl_close($ch); //关闭访问,释放资源 
 
         $result =file_get_contents("https://hub.nuaa.cf/cxfksword/iptv/raw/master/daily_multi.m3u8"); 
+
+        file_put_contents("momo.json", $result."创建时间 ：" + $currenttime);  
         
         $v = explode('#EXTINF',$result); //拆 $ 符号为数组   
         
