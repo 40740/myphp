@@ -1,12 +1,14 @@
 <?Php 
-        $loginUrl ="https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8";
+//         $loginUrl ="https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8";
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL,$loginUrl);
-        $result=curl_exec($ch);
-        curl_close($ch); //关闭访问,释放资源 
+//         $ch = curl_init();
+//         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+//         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//         curl_setopt($ch, CURLOPT_URL,$loginUrl);
+//         $result=curl_exec($ch);
+//         curl_close($ch); //关闭访问,释放资源 
+
+        $result = fopen("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8","r");
         
         $v = explode('#EXTINF',$result); //拆 $ 符号为数组   
         
