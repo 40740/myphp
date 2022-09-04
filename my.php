@@ -8,7 +8,7 @@
 //         $result=curl_exec($ch);
 //         curl_close($ch); //关闭访问,释放资源 
 
-        $result =file_get_contents("https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8"); 
+        $result =file_get_contents("daily_multi.m3u8"); 
 
         file_put_contents("momo.json", $result."创建时间 ：" + $currenttime);  
         
