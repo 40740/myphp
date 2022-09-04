@@ -1,5 +1,5 @@
 <?Php 
-        $loginUrl ="https://raw.nuaa.cf/cxfksword/iptv/master/daily_multi.m3u8";
+        $loginUrl ="https://github.com/cxfksword/iptv/raw/master/daily_multi.m3u8";
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -53,9 +53,10 @@
         }
         
         
-        
-        file_put_contents("README.md", $data); 
-        file_put_contents("json.json", $v); 
-        file_put_contents("txt.json", "有吗"); 
+        date_default_timezone_set(PRC);     //将date函数默认时间设置中国区时间
+        $currenttime=date("Y-m-d H:i:s");   //给变量赋值，调用date函数，格式为 年-月-日 时:分:秒
+
+        file_put_contents("README.md", $data."创建时间 ：" + $currenttime); 
+        file_put_contents("json.json", $v."创建时间 ：" + $currenttime);  
         
      
