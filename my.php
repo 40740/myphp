@@ -22,7 +22,7 @@
             foreach ($contents as $content){
                 $image = file_get_contents($content['coverUrl']);
                 if($image){
-                    file_put_contents($content['tvName'].'.png',$image);
+                    file_put_contents($content['tvName'].'.jpg',$image);
                 }
             }
             
